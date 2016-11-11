@@ -16,6 +16,8 @@
 		8B30D1B51DD55ABE00E1309E /* Clouds.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 8B30D1B41DD55ABE00E1309E /* Clouds.jpeg */; };
 		8B30D1B71DD55C5200E1309E /* homeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B30D1B61DD55C5200E1309E /* homeViewController.swift */; };
 		8B30D1B91DD55D3600E1309E /* newDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B30D1B81DD55D3600E1309E /* newDataViewController.swift */; };
+		8B30D1BB1DD55E9100E1309E /* ContactsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B30D1BA1DD55E9100E1309E /* ContactsTableViewController.swift */; };
+		8B30D1BD1DD55FCC00E1309E /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B30D1BC1DD55FCC00E1309E /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +33,8 @@
 		8B30D1B41DD55ABE00E1309E /* Clouds.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Clouds.jpeg; sourceTree = "<group>"; };
 		8B30D1B61DD55C5200E1309E /* homeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = homeViewController.swift; sourceTree = "<group>"; };
 		8B30D1B81DD55D3600E1309E /* newDataViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = newDataViewController.swift; sourceTree = "<group>"; };
+		8B30D1BA1DD55E9100E1309E /* ContactsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsTableViewController.swift; sourceTree = "<group>"; };
+		8B30D1BC1DD55FCC00E1309E /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +73,8 @@
 				8B30D19A1DD559F200E1309E /* AppDelegate.swift */,
 				8B30D1B61DD55C5200E1309E /* homeViewController.swift */,
 				8B30D1B81DD55D3600E1309E /* newDataViewController.swift */,
+				8B30D1BA1DD55E9100E1309E /* ContactsTableViewController.swift */,
+				8B30D1BC1DD55FCC00E1309E /* DetailViewController.swift */,
 				8B30D19E1DD559F200E1309E /* Main.storyboard */,
 				8B30D1A11DD559F200E1309E /* Assets.xcassets */,
 				8B30D1A31DD559F200E1309E /* LaunchScreen.storyboard */,
@@ -172,6 +178,8 @@
 			files = (
 				8B30D1B91DD55D3600E1309E /* newDataViewController.swift in Sources */,
 				8B30D19B1DD559F200E1309E /* AppDelegate.swift in Sources */,
+				8B30D1BD1DD55FCC00E1309E /* DetailViewController.swift in Sources */,
+				8B30D1BB1DD55E9100E1309E /* ContactsTableViewController.swift in Sources */,
 				8B30D1B71DD55C5200E1309E /* homeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
