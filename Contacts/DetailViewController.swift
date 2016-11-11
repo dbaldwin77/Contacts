@@ -10,6 +10,20 @@ import UIKit
 
 class DetailViewController: UIViewController {
     
+    var nameR = String()
+    var addressR = String()
+    var phoneNumberR = String()
+    var notesR = String()
+    
+
+    @IBOutlet weak var nameTxtField: UITextField!
+    
+    @IBOutlet weak var addressTxtField: UITextField!
+    
+    @IBOutlet weak var phoneNumberTxtField: UITextField!
+    
+    @IBOutlet weak var notesTxtField: UITextView!
+    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         view.endEditing(true)
     }
@@ -20,8 +34,12 @@ class DetailViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        nameTxtField.text = nameR
+        addressTxtField.text = addressR
+        phoneNumberTxtField.text = phoneNumberR
+        notesTxtField.text = notesR
 
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {

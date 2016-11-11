@@ -31,6 +31,7 @@ class newDataViewController: UIViewController {
         store.setObject(txtName.text as CKRecordValue?, forKey: "Name")
         store.setObject(txtAddress.text as CKRecordValue?, forKey: "Address")
         store.setObject(txtPhoneNumber.text as CKRecordValue?, forKey: "Phone_Number")
+        store.setObject(txtNotes.text as CKRecordValue?, forKey: "Notes")
         publicDataBase.save(store, completionHandler:  { (record: CKRecord?, error: Error?) -> Void in
             if error != nil {
                 print("Error saving Data" + (error?.localizedDescription)!)

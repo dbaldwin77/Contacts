@@ -123,14 +123,26 @@ class ContactsTableViewController: UITableViewController {
      }
      */
     
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
+ 
      override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destinationViewController.
-     // Pass the selected object to the new view controller.
+        var indexPath: IndexPath = self.tableView.indexPathForSelectedRow!
+        let detinationView = segue.destination as! DetailViewController
+        
+        let selectedRecord = DataArray[indexPath.row]
+        
+        let Name = selectedRecord.object(forKey: "Name") as? String
+        let Address = selectedRecord.object(forKey: "Address") as? String
+        let PhoneNumber = selectedRecord.object(forKey: "Phone_Number") as? String
+        let Notes = selectedRecord.object(forKey: "Notes") as? String
+        
+        detinationView.nameR = Name!
+        detinationView.addressR = Address!
+        detinationView.phoneNumberR = PhoneNumber!
+        detinationView.notesR = Notes!
+        
+        
+ 
      }
-     */
+   
     
 }

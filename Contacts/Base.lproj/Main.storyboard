@@ -44,7 +44,7 @@
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="0.38720695370000002" green="0.4895444203" blue="0.61703279700000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
-                                    <segue destination="n67-x0-51W" kind="show" id="GEW-9r-0g8"/>
+                                    <segue destination="gGL-kc-awI" kind="show" id="KdY-nf-vaM"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -171,6 +171,12 @@
                             <outlet property="backBarButtonItem" destination="QKD-sC-4HB" id="ZT3-gH-pYL"/>
                         </connections>
                     </navigationItem>
+                    <connections>
+                        <outlet property="addressTxtField" destination="uli-2g-J5h" id="hzc-Ll-c0S"/>
+                        <outlet property="nameTxtField" destination="TNT-7s-0J2" id="L77-R6-DY2"/>
+                        <outlet property="notesTxtField" destination="52b-l2-EXO" id="3FK-zN-BAk"/>
+                        <outlet property="phoneNumberTxtField" destination="44P-2d-Q33" id="8SB-ci-yDx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CHH-6u-CdU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -420,7 +426,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NgC-3w-KPZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="144.80000000000001" y="479.91004497751129"/>
+            <point key="canvasLocation" x="135" y="570"/>
         </scene>
     </scenes>
     <resources>
@@ -428,10 +434,10 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="JNB-QP-Ycx"/>
-        <segue reference="GEW-9r-0g8"/>
+        <segue reference="Bdc-CJ-V03"/>
         <segue reference="VEa-nH-Xva"/>
         <segue reference="4yi-eM-0T7"/>
+        <segue reference="hrf-5V-Mar"/>
         <segue reference="Vre-QK-LFZ"/>
-        <segue reference="DEP-AV-srw"/>
     </inferredMetricsTieBreakers>
 </document>
