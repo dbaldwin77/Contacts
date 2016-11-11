@@ -11,6 +11,7 @@ import CloudKit
 
 class ContactsTableViewController: UITableViewController {
 
+    
     var DataArray: Array<CKRecord> = []
     
     
@@ -23,7 +24,7 @@ class ContactsTableViewController: UITableViewController {
         super.viewDidLoad()
         refresh = UIRefreshControl()
         refresh.attributedTitle = NSAttributedString(string: "Pull Down To Load Data")
-        refresh.addTarget(self, action: #selector(DataTableViewController.LoadData), for: UIControlEvents.valueChanged)
+        refresh.addTarget(self, action: #selector(ContactsTableViewController.LoadData), for: UIControlEvents.valueChanged)
         tableView.addSubview(refresh)
         refresh.beginRefreshing()
         
