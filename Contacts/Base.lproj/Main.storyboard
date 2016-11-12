@@ -23,18 +23,18 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="yNg-dG-jVf" id="xL1-Tz-ceY">
-                                    <rect key="frame" x="0.0" y="0.0" width="342" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="342" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="vNz-ei-Pbv">
-                                            <rect key="frame" x="15" y="5" width="33.5" height="20.5"/>
+                                            <rect key="frame" x="15" y="4" width="34" height="21"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="VpP-Uu-19o">
-                                            <rect key="frame" x="15" y="25.5" width="44" height="14.5"/>
+                                            <rect key="frame" x="15" y="25" width="44" height="15"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                             <nil key="textColor"/>
@@ -59,7 +59,7 @@
             </objects>
             <point key="canvasLocation" x="-670" y="690"/>
         </scene>
-        <!--Contact Info-->
+        <!--Detail View Controller-->
         <scene sceneID="Bpw-Qj-vjK">
             <objects>
                 <viewController id="gGL-kc-awI" customClass="DetailViewController" customModule="Contacts" customModuleProvider="target" sceneMemberID="viewController">
@@ -72,25 +72,25 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TNT-7s-0J2">
-                                <rect key="frame" x="16" y="119" width="343" height="30"/>
+                                <rect key="frame" x="16" y="163" width="343" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone Number" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="44P-2d-Q33">
-                                <rect key="frame" x="16" y="239" width="343" height="30"/>
+                                <rect key="frame" x="16" y="283" width="343" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Address" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uli-2g-J5h">
-                                <rect key="frame" x="16" y="179" width="343" height="30"/>
+                                <rect key="frame" x="16" y="223" width="343" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Notes:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rPF-zP-FCh">
-                                <rect key="frame" x="16" y="304" width="55" height="21"/>
+                                <rect key="frame" x="16" y="348" width="55" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="55" id="Cbe-yV-Gah"/>
                                 </constraints>
@@ -99,13 +99,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="52b-l2-EXO">
-                                <rect key="frame" x="16" y="344" width="343" height="128"/>
+                                <rect key="frame" x="16" y="388" width="343" height="84"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contact Information" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fqG-XV-J2G">
-                                <rect key="frame" x="102" y="69" width="170" height="20"/>
+                                <rect key="frame" x="102" y="113" width="170" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="Eos-93-ajF"/>
                                 </constraints>
@@ -151,7 +151,7 @@
                             <constraint firstItem="TNT-7s-0J2" firstAttribute="leading" secondItem="uli-2g-J5h" secondAttribute="leading" id="zal-Kj-WUR"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Contact Info" id="UT1-HR-hqb"/>
+                    <tabBarItem key="tabBarItem" enabled="NO" title="" id="UT1-HR-hqb"/>
                     <connections>
                         <outlet property="addressTxtField" destination="uli-2g-J5h" id="hzc-Ll-c0S"/>
                         <outlet property="nameTxtField" destination="TNT-7s-0J2" id="L77-R6-DY2"/>
@@ -307,6 +307,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="JAk-Kc-suz"/>
+        <segue reference="KdY-nf-vaM"/>
     </inferredMetricsTieBreakers>
 </document>

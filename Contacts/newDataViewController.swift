@@ -45,6 +45,7 @@ class newDataViewController: UIViewController {
         self.txtName.text = " "
         self.txtAddress.text = " "
         self.txtPhoneNumber.text = " "
+        self.txtNotes.text = "  "
     }
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         
