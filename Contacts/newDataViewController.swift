@@ -16,6 +16,11 @@ class newDataViewController: UIViewController {
     @IBOutlet weak var txtPhoneNumber: UITextField!
     @IBOutlet weak var txtNotes: UITextView!
 
+    @IBOutlet weak var txtHobby1: UITextField!
+    
+    @IBOutlet weak var txtHobby2: UITextField!
+    
+    @IBOutlet weak var txtHobby3: UITextField!
     
     var recordInfo = String()
     var Alert: UIAlertController!
@@ -40,12 +45,28 @@ class newDataViewController: UIViewController {
             }
             
         })
+        let storeRef = CKRecord(recordType: "Hobbies")
+        storeRef.setObject(txtHobby1.text as CKRecordValue?, forKey: "Hobby1")
+        storeRef.setObject(txtHobby2.text as CKRecordValue?, forKey: "Hobby2")
+        storeRef.setObject(txtHobby3.text as CKRecordValue?, forKey: "Hobby3")
+                publicDataBase.save(storeRef, completionHandler:  { (record: CKRecord?, error: Error?) -> Void in
+            if error != nil {
+                print("Error saving Data" + (error?.localizedDescription)!)
+            } else {
+                print("Data Saved")
+            }
+            
+        })
+        
         self.present(self.Alert, animated: true, completion: nil)
         
         self.txtName.text = " "
         self.txtAddress.text = " "
         self.txtPhoneNumber.text = " "
         self.txtNotes.text = "  "
+        self.txtHobby1.text = "  "
+        self.txtHobby2.text = "  "
+        self.txtHobby3.text = "  "
     }
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         

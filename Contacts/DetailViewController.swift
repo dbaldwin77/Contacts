@@ -8,13 +8,18 @@
 
 import UIKit
 
+
 class DetailViewController: UIViewController {
+
     
     var nameR = String()
     var addressR = String()
     var phoneNumberR = String()
     var notesR = String()
-    
+    var Hobby1 = String()
+    var Hobby2 = String()
+    var Hobby3 = String()
+
 
     @IBOutlet weak var nameTxtField: UITextField!
     
@@ -24,15 +29,20 @@ class DetailViewController: UIViewController {
     
     @IBOutlet weak var notesTxtField: UITextView!
     
+    
+    @IBOutlet weak var txtHobby1: UITextField!
+    
+    
+    @IBOutlet weak var txtHobby2: UITextField!
+    
+    @IBOutlet weak var txtHobby3: UITextField!
+    
+    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         view.endEditing(true)
     }
 
 
-    @IBAction func editSaveButton(_ sender: UIButton) {
-        
-        
-    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,23 +51,19 @@ class DetailViewController: UIViewController {
         addressTxtField.text = addressR
         phoneNumberTxtField.text = phoneNumberR
         notesTxtField.text = notesR
+        txtHobby1.text = Hobby1
+        txtHobby2.text = Hobby2
+        txtHobby3.text = Hobby3
+
 
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        // Dispose of any resources that can be recreate
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
+  
 
 }

@@ -13,7 +13,7 @@ class ContactsTableViewController: UITableViewController {
 
     
     var DataArray: Array<CKRecord> = []
-    
+    var infoArray: Array<CKRecord> = []
     
     var refresh: UIRefreshControl!
     
@@ -25,10 +25,12 @@ class ContactsTableViewController: UITableViewController {
         refresh = UIRefreshControl()
         refresh.attributedTitle = NSAttributedString(string: "Pull Down To Load Data")
         refresh.addTarget(self, action: #selector(ContactsTableViewController.LoadData), for: UIControlEvents.valueChanged)
+         refresh.addTarget(self, action: #selector(ContactsTableViewController.LoadMoreData), for: UIControlEvents.valueChanged)
         tableView.addSubview(refresh)
         refresh.beginRefreshing()
         
         LoadData()
+        LoadMoreData()
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
         
@@ -63,6 +65,31 @@ class ContactsTableViewController: UITableViewController {
         }
         
     }
+    
+    func LoadMoreData() {
+        infoArray = Array<CKRecord>()
+        let DataPublicDataBase = CKContainer.default().publicCloudDatabase
+        let DataPredicate = NSPredicate(value: true)
+        
+        let DataQuery = CKQuery(recordType: "Hobbies", predicate: DataPredicate)
+        DataQuery.sortDescriptors = [NSSortDescriptor(key: "creationDate", ascending: false)]
+        DataPublicDataBase.perform(DataQuery, inZoneWith: nil)  { (results: [CKRecord]?, error: Error?) -> Void in
+            if error != nil {
+                print("Error" + error.debugDescription)
+            } else {
+                for results2 in results! {
+                    self.infoArray.append(results2)
+                }
+                OperationQueue.main.addOperation ( { () -> Void in
+                    self.tableView.reloadData()
+                    self.tableView.isHidden = false
+                    self.refresh.endRefreshing()
+                })
+            }
+        }
+        
+    }
+
     // MARK: - Table view data source
     
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -140,9 +167,20 @@ class ContactsTableViewController: UITableViewController {
         detinationView.phoneNumberR = PhoneNumber!
         detinationView.notesR = Notes!
         
+       
+        let selectedRecord2 = infoArray[indexPath.row]
+        
+        let hobby1 = selectedRecord2.object(forKey: "Hobby1") as? String
+        let hobby2 = selectedRecord2.object(forKey: "Hobby2") as? String
+        let hobby3 = selectedRecord2.object(forKey: "Hobby3") as? String
+        
+        detinationView.Hobby1 = hobby1!
+        detinationView.Hobby2 = hobby2!
+        detinationView.Hobby3 = hobby3!
+
         
  
      }
    
-    
+  
 }
